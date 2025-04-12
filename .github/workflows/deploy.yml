@@ -1,5 +1,5 @@
 name: Deploy
-run-name: ${{ github.actor }} is running Deploy Actions 🚀
+run-name: ${{ github.actor }} is running Deploy Actions ð
 
 on:
   push:
@@ -14,18 +14,18 @@ jobs:
       contents: read # Needed to clone the repository
 
     steps:
-      - name: 拉取代码
+      - name: æåä»£ç 
         uses: actions/checkout@v4
 
-      - name: 设置 pnpm
+      - name: è®¾ç½® pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 7.x
 
-      - name: 安装依赖并执行构建
+      - name: å®è£ä¾èµå¹¶æ§è¡æå»º
         run: pnpm i && pnpm --prefix src/frontend i && npm run build
 
-      - name: 部署到 Deno Deploy
+      - name: é¨ç½²å° Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: blive
