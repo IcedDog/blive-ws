@@ -4,9 +4,8 @@ import {jsonResponse} from "../utils.ts";
 
 const env = await dotenv.load()
 
-const projectId = "c995b30b-d571-4fb3-9e9b-8267e537a5d7"
+const projectId = "760cef62-7ac8-4400-87aa-14828b84fab2"
 const token = env["ACCESS_TOKEN"]
-
 interface DeploymentItem {
     id: string
     projectId: string
